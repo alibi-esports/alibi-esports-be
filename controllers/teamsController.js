@@ -2,6 +2,27 @@ const Player = require('../db/models/Player');
 const Team = require('../db/models/Team');
 const asyncHandler = require('express-async-handler');
 
+const createNewTeam = asyncHandler(async (req, res) => {
+  const { teamName } = req.body;
+
+  // Confirm data
+  if (!teamName) {
+    return res.status(400).json({ message: 'All fields are required' });
+  }
+
+  const teamObj = { name: teamName };
+
+  // Create & Store team
+  const team = await Team.create(teamObj);
+
+  // If created
+  if (team) {
+    res.status(201).json({ message: `New team ${teamName} created` });
+  } else {
+    res.status(400).json({ message: 'Invalid team data received' });
+  }
+});
+
 // @desc Get all teams + players on that team
 // @route GET /teams
 // @access Private
@@ -24,4 +45,4 @@ const getTeam = asyncHandler(async (req, res) => {
   res.json(team);
 });
 
-module.exports = { getAllTeams, getTeam };
+module.exports = { getAllTeams, getTeam, createNewTeam };

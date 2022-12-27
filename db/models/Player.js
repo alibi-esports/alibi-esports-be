@@ -13,30 +13,26 @@ const Player = db.define('player', {
   ign: {
     type: Sequelize.STRING,
     allowNull: false,
-    validate: {
-      is: /^(.{5,16})#[a-zA-Z0-9]{3,5}/,
-    },
+    // validate: {
+    //   is: /^(.{5,16})#[a-zA-Z0-9]{3,5}/,
+    // },
   },
   isCaptain: {
     type: Sequelize.BOOLEAN,
-    allowNull: false,
     defaultValue: false,
   },
   rank: {
     type: Sequelize.STRING,
     allowNull: false,
   },
-  email: {
-    type: Sequelize.STRING,
-    validate: {
-      isEmail: true,
-    },
-  },
   discord: {
     type: Sequelize.STRING,
-    validate: {
-      is: /[a-zA-Z0-9_]+#+\d{4}$/,
-    },
+    // validate: {
+    //   is: /[a-zA-Z0-9_]+#+\d{4}$/,
+    // },
+  },
+  teamName: {
+    type: Sequelize.STRING,
   },
 });
 
