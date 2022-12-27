@@ -83,7 +83,7 @@ const createNewPlayer2 = asyncHandler(async (req, res) => {
 
   // If created
   if (player) {
-    res.status(201).json({ message: `New player ${teamName} created` });
+    res.status(201).json({ message: `New player ${p2InGameName} created` });
   } else {
     res.status(400).json({ message: 'Invalid user data received' });
   }
