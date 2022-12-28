@@ -4,33 +4,19 @@ const { Player, Team } = require('./');
 
 const players = [
   // {
-  //   firstName: 'Ryan',
-  //   lastName: 'Won',
-  //   ign: 'handyice#XSET',
+  //   firstName: 'TestFname',
+  //   lastName: 'TestLname',
+  //   ign: 'TestIGN#TEST',
   //   isCaptain: true,
-  //   rank: 'Radiant 2',
-  //   discord: 'rwon#2503',
-  //   teamName: 'Founders',
-  // },
-  // {
-  //   firstName: 'Justin',
-  //   lastName: 'Suhhh',
-  //   ign: 'choob#12345',
-  //   rank: 'Iron 4',
-  //   teamName: 'Founders',
-  // },
-  // {
-  //   firstName: 'Gloria',
-  //   lastName: 'Choi',
-  //   ign: 'chominnnn#CARRY',
-  //   rank: 'Immortal 3',
-  //   teamName: 'Founders',
+  //   rank: 'TestRank',
+  //   discord: 'TestDiscord#TEST',
+  //   teamName: 'Testers',
   // },
 ];
 
 const teams = [
   // {
-  //   name: 'Founders',
+  //   name: 'Testers',
   // },
 ];
 

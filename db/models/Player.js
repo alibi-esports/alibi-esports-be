@@ -33,6 +33,10 @@ const Player = db.define('player', {
   },
   teamName: {
     type: Sequelize.STRING,
+    references: {
+      model: 'teams',
+      key: 'name',
+    },
   },
 });
 

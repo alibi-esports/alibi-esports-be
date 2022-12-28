@@ -156,7 +156,7 @@ const createNewPlayer5 = asyncHandler(async (req, res) => {
     lastName: p5LName,
     ign: p5InGameName,
     rank: p5Rank,
-    teamName,
+    teamName: teamName,
   };
 
   // Create & Store Player
