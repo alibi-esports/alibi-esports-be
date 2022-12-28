@@ -6,10 +6,6 @@ const Team = db.define('team', {
     type: Sequelize.STRING,
     allowNull: false,
     primaryKey: true,
-    // unique: true,
-    validate: {
-      isAlphanumeric: true,
-    },
   },
 });
 
