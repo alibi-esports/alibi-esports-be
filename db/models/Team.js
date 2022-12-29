@@ -7,6 +7,11 @@ const Team = db.define('team', {
     allowNull: false,
     primaryKey: true,
   },
+  sub1IGN: Sequelize.STRING,
+  sub2IGN: Sequelize.STRING,
+  coachIGN: Sequelize.STRING,
+  coachDiscord: Sequelize.STRING,
+  managerDiscord: Sequelize.STRING,
 });
 
 module.exports = Team;

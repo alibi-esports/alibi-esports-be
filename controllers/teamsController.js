@@ -3,14 +3,22 @@ const Team = require('../db/models/Team');
 const asyncHandler = require('express-async-handler');
 
 const createNewTeam = asyncHandler(async (req, res) => {
-  const { teamName } = req.body;
+  const { teamName, sub1IGN, sub2IGN, coachIGN, coachDiscord, managerDiscord } =
+    req.body;
 
   // Confirm data
   if (!teamName) {
     return res.status(400).json({ message: 'All fields are required' });
   }
 
-  const teamObj = { name: teamName };
+  const teamObj = {
+    name: teamName,
+    sub1IGN,
+    sub2IGN,
+    coachIGN,
+    coachDiscord,
+    managerDiscord,
+  };
 
   // Create & Store team
   const team = await Team.create(teamObj);
